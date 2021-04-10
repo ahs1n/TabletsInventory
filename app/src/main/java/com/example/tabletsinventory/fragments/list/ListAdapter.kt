@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.custom_row.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
-    private var tabletList = emptyList<Tablets>()
+    var tabletList = emptyList<Tablets>()
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

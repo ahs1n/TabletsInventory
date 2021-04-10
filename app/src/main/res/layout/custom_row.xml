@@ -7,7 +7,54 @@
     android:layout_height="wrap_content"
     android:padding="24sp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/projectName_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:text="ABCD"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tagNum_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:text="ABCD.TAB:0001"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/location_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:text="Islamabad"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/custodian_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:text="M Hussain"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
     <TextView
+        android:visibility="gone"
         android:id="@+id/id_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,39 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tagNum_txt"
-        android:layout_width="wrap_content"
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="ABCD.TAB:0001"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/id_txt"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/location_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginStart="8dp"
-        android:text="Islamabad"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tagNum_txt"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/custodian_txt"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="M Hussain"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/location_txt"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:visibility="gone"
@@ -61,7 +76,7 @@
         android:layout_marginStart="8dp"
         android:text="Box and Charger"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custodian_txt"
+        app:layout_constraintStart_toEndOf="@+id/id_txt"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -87,14 +102,5 @@
         app:layout_constraintStart_toEndOf="@+id/accessoriesRec_txt"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:textSize="20dp"
-        android:id="@+id/projectName_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="ABCD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/issueDate_txt"
-        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
