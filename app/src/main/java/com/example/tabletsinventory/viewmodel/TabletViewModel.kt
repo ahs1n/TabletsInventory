@@ -26,4 +26,10 @@ class TabletViewModel(application: Application) : AndroidViewModel(application) 
             repository.addTablet(tablets)
         }
     }
+
+    fun updateTablet(tablets: Tablets){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateTablet(tablets)
+        }
+    }
 }

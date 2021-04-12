@@ -3,9 +3,11 @@ package com.example.tabletsinventory.fragments.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tabletsinventory.R
 import com.example.tabletsinventory.model.Tablets
+import com.example.tabletsinventory.utils.convertStringToUpperCase
 import kotlinx.android.synthetic.main.custom_row.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -35,9 +37,15 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.accessoriesSend_txt.text = currentItem.accessoriesSend
         holder.itemView.accessoriesRec_txt.text = currentItem.accessoriesRec
         holder.itemView.issueDate_txt.text = currentItem.issueDate
-        holder.itemView.projectName_txt.text = currentItem.projectName
+        holder.itemView.projectName_txt.text = currentItem.projectName.convertStringToUpperCase()
+
+        holder.itemView.rowLayout.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
-    fun setData(tablets: List<Tablets>){
+
+    fun setData(tablets: List<Tablets>) {
         this.tabletList = tablets
         notifyDataSetChanged()
     }

@@ -11,4 +11,8 @@ class TabletRepository(private val tabletsDao: TabletsDao) {
     fun addTablet(tablets: Tablets) {
         tabletsDao.addTablet(tablets)
     }
+
+    suspend fun updateTablet(tablets: Tablets){
+        tabletsDao.updateTablet(tablets)
+    }
 }

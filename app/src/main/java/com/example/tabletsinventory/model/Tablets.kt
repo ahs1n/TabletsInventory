@@ -1,8 +1,11 @@
 package com.example.tabletsinventory.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "tablets_table")
 data class Tablets(
     @PrimaryKey(autoGenerate = true)
@@ -14,4 +17,4 @@ data class Tablets(
     val accessoriesRec: String,
     val issueDate: String,
     val projectName: String
-)
+): Parcelable
