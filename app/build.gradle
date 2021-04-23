@@ -71,4 +71,8 @@ dependencies {
 
     //MultiStateView
     implementation  'com.github.Kennyc1012:MultiStateView:2.2.0'
+
+    //Date
+    implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.3.0'
 }

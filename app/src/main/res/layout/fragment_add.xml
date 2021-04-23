@@ -71,16 +71,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addAccSend" />
 
-    <EditText
+    <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
         android:id="@+id/addDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:hint="dd/mm/yyyy"
         android:inputType="date"
+        app:dateFormat="dd-MM-yyyy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addAccRec" />
+        app:layout_constraintTop_toBottomOf="@+id/addAccRec"
+        app:maxDate="CR_DATE" />
+
 
     <EditText
         android:id="@+id/addProjectName"
